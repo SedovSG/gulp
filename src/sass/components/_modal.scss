@@ -1,0 +1,48 @@
+.modal {
+  width: 35em;
+  top: 5vh !important;
+
+  @media #{$medium-and-down} {
+    width: 86vw;
+  }
+
+  [type="checkbox"] + label::before, [type="checkbox"]:not(.filled-in) + label::after {
+    width: 14px;
+    height: 14px;
+    top: 5px;
+  }
+
+  [type="checkbox"] + label {
+    padding-left: 20px;
+  }
+
+  .modal-content {
+    padding: 30px 40px 35px;
+
+    small {
+      font-size: 70%;
+    }
+  }
+
+  form {
+    margin-top: 2.5em;
+
+    .input-field {
+      padding-bottom: 0.75em;
+
+      input, text {
+        border-bottom-color: $secondary-color;
+        color: $secondary-color;
+      }
+    }
+
+    .confirm {
+      margin-bottom: 2.5em;
+
+      [type="checkbox"] + span.confirm-text {
+        line-height: 1.2em;
+        display: inline;
+      }
+    }
+  }
+}

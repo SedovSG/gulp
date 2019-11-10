@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+@import "variables";
+@import "helpers";
+@import "modal";
+@import "form";
+
+body {
+  min-height: 100%;
+  text-rendering: optimizeLegibility;
+  color: $base-color;
+  font-family: $base-font;
+  font-size: 1.15em;
+  height: 80em;
+}
+
+.container {
+  width: 90%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+  font-weight: normal;
+  color: $base-color;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  font-weight: 500;
+}
+
+%title {
+  margin: 0 0 0 0;
+  position: relative;
+  padding: 1.4em 0 0.6em 0;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+
+  &:before {
+    display: block;
+    width: 80px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 2em;
+    background-color: $primary-color;
+    content: '';
+  }
+
+  & + p {
+   margin: 0em 0 2em 0;
+ }
+}
+
+h2.title {
+  @extend %title;
+}
+
+h5.title {
+  @extend %title;
+
+  &:before {
+    bottom: 3.65em;
+  }
+}
+
+h6.title {
+  @extend %title;
+
+  &:before {
+    bottom: 3.65em;
+  }
+}
+
+hr {
+  border: 1px solid $primary-color;
+  width: 6em;
+
+  &.small {
+    width: 4em;
+  }
+}
+
+@media screen and (max-width: 434px) {
+  h2.title:before {
+    bottom: 3em;
+  }
+}
+
+a {
+  color: #1e88e5;
+
+  &.underscore {
+    text-decoration: underline;
+    border-bottom: none;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom: none;
+    }
+  }
+
+  &.underline {
+    border-bottom: 1px solid;
+    text-decoration: none;
+
+
+    &:hover {
+      text-decoration: none;
+      border-bottom: none;
+    }
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+a.btn {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.icon-mail {
+  height: 16px;
+  vertical-align: middle;
+  padding-right: 3px;
+}
+
+.icon-phone {
+  height: 18px;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.card {
+  @extend %card;
+  margin-top: 0;
+}
+
+.breadcrumbs {
+  background: transparent;
+  box-shadow: none;
+  line-height: 1;
+  padding-top: 2em;
+  min-height: 4em;
+  display: inline-block;
+
+  .breadcrumb {
+    color: $secondary-color;
+
+    &:before {
+     color: #ccc;
+     margin-top: -2px;
+    }
+    
+    &:last-child {
+      color: $base-color;
+
+      &:hover {
+        text-decoration: none;
+
+        &:hover {
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+.parallax-container {
+  min-height: 570px;
+
+  @media #{$medium-and-down} {
+    .parallax {
+      img {
+        top: -5em;
+      }
+    }
+  }
+}
+
+%filter-search {
+  .input-field {
+    input {
+      color: $base-color;
+    }
+
+    .prefix.active {
+      color: $primary-color !important;
+    }
+
+    label.active {
+      color: $primary-color !important;
+    }
+  }
+}
+
+%card {
+  &.active {
+    background-color: $secondary-color;
+    color: white;
+
+    .card-title {
+      color: white !important;
+    }
+
+    .number {
+      color: $secondary-color-light !important;
+      opacity: .5 !important;
+    }
+
+    .card-action {
+      border-color: rgba(180,180,180,0.2);
+
+      &:hover {
+        a {
+          color: white !important;
+        }
+      }
+
+      a {
+        color: white !important;
+
+        &:hover, &:focus, &:active {
+          color: white !important;
+        }
+      }
+    }
+  }
+
+  .card-action {
+    border-color: #ccc;
+
+    &:hover {
+      cursor: pointer;
+
+      a {
+        color: $accent-color !important;
+        text-decoration: none;
+
+        .icons {
+          display: inline-block;
+        }
+      }
+    }
+
+    a {
+      color: #1e88e5 !important;
+
+      .icons {
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+%aside {
+  border: 1px solid #ccc;
+  padding-right: 0;
+  margin-bottom: 2em;
+
+  & > ul {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    & > li {
+      a {
+        display: inline-block;
+        padding: 0.7em 1em;
+        color: $base-color;
+      }
+
+      &.active {
+        background-color: $secondary-color;
+        transition: all .1s linear 0s;
+
+        a {
+          color: white;
+          transition: all .3s linear 0s;
+        }
+      }
+
+      border-bottom: 1px solid #ccc;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      ul {
+        list-style-position: inside;
+        display: none;
+
+        &.active {
+          display: block;
+        }
+
+        li {
+          text-indent: 1em;
+          border-bottom: 1px solid #ccc;
+          background-color: $base-color;
+
+          &:before {
+            content: "■ ";
+            color: white;
+          }
+
+          a {
+            margin-left: -1.6em;
+            color: white;
+          }
+
+          &:first-child {
+            border-top: 1px solid #ccc;
+          }
+
+          &:last-child {
+            border-bottom: 0;
+          }
+
+          ul {
+            list-style-position: inside;
+
+            li {
+              text-indent: 1.8em;
+              border-top: 1px solid #ccc;
+
+              &:before {
+                content: "■ ";
+                color: white;
+              }
+
+              a {
+                margin-left: -2.6em;
+              }
+
+              &:last-child {
+                border-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

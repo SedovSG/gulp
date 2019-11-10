@@ -1,0 +1,9 @@
+Host: http://site.tech
+
+User-agent: *
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /vendor/
+Allow: /dist/
+
+Sitemap: http://site.tech/sitemap.xml

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!--======= Basic Metas =======-->
+    <meta charset="utf-8">
+    <meta name="author" content="www.omnisoft.pro">
+    <meta name="copyright" lang="ru" content="www.spk-agrocompany.ru">
+
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="description" content="{{ description }}">
+
+    <!--======= Mobile Metas =======-->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  	<title>{{ page_title }}</title>
+
+    <!--======= Favicons =======-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/dist/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/dist/img/favicons/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/dist/img/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/dist/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/dist/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/dist/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/dist/img/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Omnisoft">
+    <meta name="application-name" content="Omnisoft">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="/dist/img/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/dist/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+   <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--======= CSS =======-->
+    <link rel="stylesheet" href="/vendor/materialize/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="/vendor/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="/vendor/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="/dist/css/custom.min.css">
+
+  <!--======= JS =======-->
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="/vendor/materialize/dist/js/materialize.js"></script>
+    <script src="/vendor/slick-carousel/slick/slick.min.js"></script>
+    <script src="/dist/js/custom.min.js"></script>
+</head>
+
+<body>
+
+  {% include "layout/header.njk" %}
+
+  {% block main %}
+    This is the default content
+  {% endblock %}
+
+  {% include "layout/footer.njk" %}
+
+</body>
+
+</html>

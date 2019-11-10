@@ -1,0 +1,8 @@
+{
+  "directory": "vendor",
+  "timeout": 60000,
+  "registry": "https://registry.bower.io",
+  "color": true,
+  "save": true,
+  "interactive": true
+}

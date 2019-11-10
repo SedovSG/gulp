@@ -1,0 +1,88 @@
+form {
+  .input-field {
+    &.confirm {
+      margin-top: 0;
+    }
+  }
+
+  .confirm [type="checkbox"] {
+    &:checked {
+      & + span.confirm-text {
+        &:after {
+          background: $primary-color !important;
+        }
+
+        @at-root [type="checkbox"] + span.confirm-text {
+          line-height: 1.2em;
+
+          &:after {
+            border: 2px solid $primary-color !important;
+            background-color: transparent !important;
+          }
+        }
+      }
+    }
+  }
+
+  input:not([type]), input[type="text"]:not(.browser-default), input[type="password"]:not(.browser-default), input[type="email"]:not(.browser-default), input[type="url"]:not(.browser-default), input[type="time"]:not(.browser-default), input[type="date"]:not(.browser-default), input[type="datetime"]:not(.browser-default), input[type="datetime-local"]:not(.browser-default), input[type="tel"]:not(.browser-default), input[type="number"]:not(.browser-default), input[type="search"]:not(.browser-default), textarea.materialize-textarea {
+    border-bottom: 1px solid $primary-color;
+    color: $base-color;
+
+    &:focus {
+      border-bottom:  1px solid $primary-color-light !important;
+      box-shadow: 0 1px 0 0 $primary-color-dark !important;
+    }
+
+    &:focus + label {
+      color: $primary-color !important;
+    }
+
+    &.valid ~ label {
+      color: $secondary-color !important;
+    }
+
+    &.invalid ~ label {
+      color: $primary-color !important;
+    }
+  }
+
+  @at-root {
+    .btn {
+      border: 2px solid $primary-color;
+      color: $primary-color;
+      font-weight: 500;
+      text-transform: none;
+      background-color: transparent;
+      border-radius: 50px;
+      margin-top: -1px;
+      line-height: 1;
+      text-shadow: 0px 0px 5px rgba(72, 72, 72, 0.5);
+
+      &.btn-flat {
+        background: transparent;
+        color: $primary-color;
+        font-weight: 400;
+        border: 1px solid $primary-color;
+        text-shadow: none;
+
+        &:hover, &:focus, &:active {
+          color: white;
+        }
+      }
+
+      &:focus {
+        outline: none;
+        background-color: $primary-color-dark;
+      }
+
+      &:hover {
+        background-color: $primary-color;
+        color: white;
+      }
+
+      &:active {
+        background-color: $primary-color-dark;
+      }
+    }
+  }
+}

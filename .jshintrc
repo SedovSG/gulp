@@ -1,0 +1,4 @@
+{
+  "extends": "/home/stas/.jshintrc",
+  "node": true
+}

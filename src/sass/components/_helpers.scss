@@ -1,0 +1,58 @@
+.no {
+  &-margin {
+	  margin: 0 !important;
+
+		&-top {margin-top: 0 !important;}
+		&-bottom {margin-bottom: 0 !important;}
+		&-left {margin-left: 0 !important;}
+		&-right {margin-right: 0 !important;}
+	}
+
+	&-padding {
+	  &-top {padding-top: 0 !important;}
+	  &-bottom {padding-bottom: 0 !important;}
+	  &-left {padding-left: 0 !important;}
+	  &-right {padding-right: 0 !important;}
+	}
+}
+
+.hyphenate {
+	word-wrap: break-word;
+	word-break: break-all;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.secondary {
+	background: $primary-color !important;
+
+	&:focus {
+	  background: $primary-color-dark !important;
+	}
+
+	&:hover {
+	  background: $primary-color-light !important;
+	}
+
+	&:active {
+	  background: $primary-color-dark !important;
+	}
+}
+
+.small {
+	font-size: 75%;
+}
+
+.big, .bigger {
+	font-size: 110%;
+	line-height: 1;
+}
+
+.bigger {
+	font-size: 120%;
+}
+
+.smaller {
+	font-size: 70%;
+}
+

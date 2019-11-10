@@ -1,0 +1,19 @@
+@import "../../../vendor/materialize/sass/components/_color-variables.scss";
+
+$primary-color: rgb(231,37,27) !default;
+$primary-color-light: lighten($primary-color, 10%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: rgb(87, 163, 16) !default;
+$secondary-color-light: lighten($secondary-color, 10%) !default;
+$secondary-color-dark: darken($secondary-color, 10%) !default;
+
+$base-color: color("grey", "darken-3") !default;
+$accent-color: #52a6ef !default;
+
+@import "../../../vendor/materialize/sass/components/variables";
+
+@import url("../../dist/fonts/Roboto/css/font.css");
+
+$base-font: Roboto, Arial, sans-serif;
+$header-font: Roboto, 'Arial Black', Verdana sans-serif;

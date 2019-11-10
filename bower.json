@@ -1,0 +1,29 @@
+{
+  "name": "site-gulp",
+  "authors": [
+    "Sedov Stas <SedovSG@yandex.ru>"
+  ],
+  "description": "Site Assembly using Gulp",
+  "main": "index.htm",
+  "keywords": [
+    "gulp"
+  ],
+  "license": "MIT",
+  "homepage": "http://omnisoft.pro",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    ".gitignore",
+    "vendor",
+    "test",
+    "tests",
+    "README.md"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "modernizr": "latest",
+    "materialize": "^1.*",
+    "slick-carousel": "slick.js#^1.8.1"
+  }
+}

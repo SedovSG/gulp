@@ -1,0 +1,18 @@
+{% from "layout/macros/swatch.njk" import swatch %}
+
+{% extends "layout/template.njk" %}
+
+{% block main %}
+
+  {% for feature in features %}
+    <div class="module">
+      <h3>{{ feature.name }}</h3>
+      <p>{{ feature.description }}</p>
+    </div>
+  {% endfor %}
+  
+  {% for color in colors %}
+    {{ swatch(color.color_name, color.color_value, color.color_notes) }}
+  {% endfor %}
+
+{% endblock %}
